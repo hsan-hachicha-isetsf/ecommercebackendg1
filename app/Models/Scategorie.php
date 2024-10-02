@@ -17,5 +17,10 @@ class Scategorie extends Model
     public function categorie(){
         return $this->belongsTo(Categorie::class,"categorieID");
     }
+    public function articles()
+    { 
+        return $this->hasMany(Article::class,"scategorieID"); 
+    }
+
 
 }
